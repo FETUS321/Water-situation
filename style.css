@@ -1,0 +1,120 @@
+body {
+font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Inter', 'Helvetica Neue', Arial, sans-serif;
+  background: var(--slate-50); color: var(--slate-800);
+  -webkit-font-smoothing: antialiased;
+}
+
+.Nav {
+  box-shadow: 0 2px 16px rgba(0,0,0,0.2);
+    position: fixed; top: 0; left: 0; right: 0; z-index: 50;
+    background-color: #1e293b;
+    box-shadow: 0 2px 16px rgba(0,0,0,0.2);
+
+}
+
+.Div-nav {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding-left: 20px;
+    padding-right: 20px;
+    display: flex;
+    align-items: center;    
+    justify-content: space-between;
+    height: 100%;
+}
+
+.Nav-content {
+    gap: 18px;
+    display: flex;
+    max-width: 1200px;
+    height: 100%;
+
+
+}
+
+ .nav-btn {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    padding: 4px 12px;
+    color: white;
+    border-radius: 8px;
+    transition: background-color 0.3s;
+}
+
+.nav-btn:hover {
+    background-color: #374151;
+}
+
+.nav-btn .text-th {
+    color: #ffffff;
+    font-weight: 600;
+}
+
+.nav-btn .text-en {
+    color: #9ca3af;
+    font-weight: 0.85em;
+    margin: 8px;
+}
+
+
+
+.Name-Logo p {
+    margin: 10px;
+    font-size: 25px;
+    color: white;
+}
+
+.body {
+    background-color: #1e293b;
+}
+
+
+
+
+
+/* กำหนดกรอบหลักของเนื้อหา */
+.main-container {
+    margin-top: 80px; /* เว้นระยะไม่ให้ Header ที่เป็น fixed ทับเนื้อหา (ปรับตัวเลขตามความสูง Header จริง) */
+    max-width: 1200px; /* จำกัดความกว้างไม่ให้ยืดเต็มจอเกินไป */
+    margin-left: auto;
+    margin-right: auto;
+    padding: 20px;
+}
+
+/* ส่วนที่ 1: หัวข้อเพจ (จัดซ้าย-ขวา) */
+.page-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 24px;
+}
+
+/* ส่วนที่ 2: การ์ดสรุปตัวเลข (ใช้ Grid แบ่ง 4 คอลัมน์) */
+.summary-cards {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* แบ่งเป็น 4 คอลัมน์เท่าๆ กัน */
+    gap: 20px; /* ระยะห่างระหว่างการ์ด */
+    margin-bottom: 32px;
+}
+
+/* ดีไซน์พื้นฐานของกล่องการ์ด */
+.card, .water-card, .alert-list-card {
+    background-color: white;
+    border-radius: 12px;
+    padding: 24px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05); /* เงาบางๆ ให้ดูมีมิติ */
+    border: 1px solid #f0f0f0; /* เส้นขอบจางๆ */
+}
+
+/* ส่วนที่ 3: โครงสร้างเนื้อหาซ้ายขวา */
+.content-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr; /* ให้คอลัมน์ซ้ายกว้างเป็น 2 เท่าของคอลัมน์ขวา */
+    gap: 24px;
+}
+
+/* ระยะห่างของกล่องน้ำในคอลัมน์ซ้าย */
+.water-card {
+    margin-bottom: 20px;
+}
