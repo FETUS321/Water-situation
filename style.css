@@ -18,7 +18,7 @@ body {
 
 /* nav bar*/
 .Nav {
-  box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.2);
   position: sticky;
   background-color: #1e293b;
   border-radius: 40px;
@@ -95,51 +95,192 @@ body {
 
 /* กำหนดกรอบหลักของเนื้อหา */
 .main-content {
-  margin-left: 20px;
-  margin-right: 20px;
-  padding: 20px;
+  margin-left: 40px;
+  margin-right: 40px;
+  margin-top: 40px;
+  margin-bottom: 40px;
+  padding: auto;
 }
 
 /* หัวข้อใหญ่ */
-.page-header {
-  display: flex;
+.page-header,
+.content-body {
   justify-content: space-between;
   align-items: flex-start;
 }
 
-/* หัวข้อรอง*/
-.header-description {
-  font-size: 16px;
-  color: #6b7280;
+.page-header h1 {
+  font-size: 42px;
+  font-weight: 600;
+  margin: 0;
 }
 
-/* การ์ดสรุปตัวเลข */
-.summary-cards {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 20px;
-  margin-bottom: 32px;
+/* หัวข้อรอง*/
+.header-description,
+.header-description p {
+  font-size: 16px;
+  color: #6b7280;
+  margin: 0;
+  padding-bottom: 20px;
 }
 
 /* ดีไซน์พื้นฐานของกล่องการ์ด */
-.card,
-.water-card,
-.alert-list-card {
+.card {
   background-color: white;
   border-radius: 12px;
   padding: 24px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
   border: 1px solid #f0f0f0;
+  max-width: max-content;
+  max-height: max-content;
 }
 
-/* โครงสร้างเนื้อหาซ้ายขวา */
+/* โครงสร้าง card */
 .content-grid {
   display: grid;
-  grid-template-columns: 2fr 1fr;
+  grid-template-columns: repeat(4, 1fr);
   gap: 24px;
 }
 
-/* ระยะห่างของกล่องน้ำในคอลัมน์ซ้าย */
-.water-card {
-  margin-bottom: 20px;
+/* Custom Page Pools */
+.card-pools {
+  background-color: rgb(253, 253, 253);
+  border-radius: 12px;
+  padding: 20px 20px 20px 25px;
+  box-shadow: 0 7px 7px rgba(0, 0, 0, 0.2);
+  border: 1px solid #f0f0f0;
+  width: 320px;
+  height: 100px;
 }
+
+.card-pools h4 {
+  color: #858a91;
+  font-size: 12px;
+  font-weight: 200;
+  margin: 0;
+}
+
+.card-pools h3 {
+  margin: 0px;
+  font-size: 40px;
+  font-weight: 600;
+}
+
+.card-pools p {
+  margin: 0 0 0 10px;
+  display: inline-block;
+  font-size: 12px;
+  color: #858a91;
+}
+
+.content-body {
+  margin: 60px 0;
+}
+
+.content-body h2 {
+  font-size: 23px;
+  font-weight: 500;
+  margin: 0;
+}
+
+.content-body p {
+  font-size: 14px;
+  color: #989eaa;
+  margin: 0;
+  padding-top: 5px;
+  padding-bottom: 30px;
+}
+
+.content-grid-pools {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.card-body-pools {
+  background-color: rgb(253, 253, 253);
+  border-radius: 12px;
+  padding: 15px 15px 15px 25px;
+  box-shadow: 0 7px 7px rgba(0, 0, 0, 0.2);
+  border: 1px solid #f0f0f0;
+}
+
+.card-body-pools h4 {
+  color: #000000;
+  font-size: 17px;
+  font-weight: 500;
+  margin: 0;
+}
+
+.card-body-pools:hover {
+  border-top: 3px solid #1e293b;
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.2);
+}
+
+.card-text-description {
+  color: #858a91;
+  font-size: 12px;
+  font-weight: 200;
+  margin: 0;
+}
+
+.card-body-unit {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  display: inline-block;
+}
+
+.card-body-unit h3,
+.card-body-unit p {
+  display: inline-block;
+}
+
+.card-body-unit p {
+  padding: 0px;
+}
+
+.card-body-unit h3 {
+  font-size: 12px;
+  font-weight: 200;
+  margin: 0;
+}
+
+.card-body-unit h3 {
+  font-size: 30px;
+  font-weight: 600;
+  margin: 0;
+}
+
+progress {
+  width: 100%;
+  height: 12px;
+  border-radius: 999px;
+}
+
+progress::-webkit-progress-bar {
+  background: #e5e7eb;
+  border-radius: 999px;
+}
+
+progress::-webkit-progress-value {
+  background: linear-gradient(90deg, #c0c1cf, #1e293b);
+  border-radius: 999px;
+}
+
+.card-body-footer {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  align-items: center;
+  justify-content: space-between;
+}
+
+.card-body-footer p {
+  padding: 0px;
+  font-weight: 500;
+}
+
+.footer-unit {
+  text-align: right;
+}
+
+/* Custom Page Pools */
