@@ -1,41 +1,385 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Water Situation</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Water Situation</title>
+  <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-    <header class="Nav">
-        <div class="Div-nav">
-            
-            <div class="Name-Logo">
-                <p href>Water Situation</p>
+  <!-- ================= HEADER ================= -->
+  <header class="Nav">
+    <div class="Div-nav">
+      <div class="Name-Logo">
+        <p>Water Situation</p>
+      </div>
+
+      <div class="Nav-content">
+        <a href="index.html" class="nav-btn">
+          <span class="text-th">ภาพรวม</span>
+          <span class="text-en"> Dashboard</span>
+        </a>
+        <a href="Ponds.html" class="nav-btn">
+          <span class="text-th">บ่อน้ำ</span>
+          <span class="text-en"> Ponds</span>
+        </a>
+        <a href="Pools.html" class="nav-btn">
+          <span class="text-th">สระน้ำ</span>
+          <span class="text-en"> Pools</span>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- ================= MAIN CONTENT ================= -->
+  <main>
+    <div class="main-content">
+      
+      <!-- Page Header -->
+      <div class="page-header">
+        <h1>ภาพรวมระบบ - Dashboard</h1>
+      </div>
+      <div class="header-description">
+        <p>สรุปสถานะทั้งหมดของระบบจัดการน้ำ System-wide water quality summary</p>
+      </div>
+
+      <!-- Top Overview Cards -->
+      <div class="content-grid">
+        <div class="card-pools">
+          <h4>ดัชนีคุณภาพน้ำโดยรวม</h4>
+          <h3>49%</h3>
+          <p style="color: #d10707">↓ วิกฤต</p>
+        </div>
+        <div class="card-pools">
+          <h4></h4>
+          <h3>4</h3>
+          <p style="color: #d10707">↓ ค่าวิกฤต</p>
+        </div>
+        <div class="card-pools">
+          <h4></h4>
+          <h3>7</h3>
+          <p style="color: #f59e0b">↑ ค่าเฝ้าระวัง</p>
+        </div>
+        <div class="card-pools">
+          <h4></h4>
+          <h3>6</h3>
+          <p style="color: #1ac703">↑ ค่าปกติ</p>
+        </div>
+      </div>
+
+      <!-- Main Body Content -->
+      <div class="content-body">
+        <div class="content-text-info">
+          
+          <!-- Left Section: Pools List -->
+          <div class="content-text-info-header">
+            <div class="content-body-header">
+              <h2>แหล่งน้ำทั้งหมด</h2>
             </div>
 
-            <div class="Nav-content">
+            <div class="content-grid-pools">
+              <!-- Pool Card 1 -->
+              <div class="card-body-pools">
+                <h4>บ่อปลาเล็ก</h4>
+                <span class="Alert-margin">2 วิกฤต</span>
+                <p class="card-text-description">ขี้ปลา, ดินโคลน, ตะกอน</p>
+                <div class="card-body-unit">
+                  <h3>24.6</h3>
+                  <p>mg/L</p>
+                </div>
+                <progress value="62" max="100"></progress>
+                <div class="card-body-footer">
+                  <p style="color: #f59e0b">เฝ้าระวัง</p>
+                  <p class="footer-unit">Threshold: 40 mg/L</p>
+                </div>
+              </div>
 
-                <a href="index.html" class="nav-btn">
-                    <span class="text-th">ภาพรวม</span>
-                    <span class="text-en"> Dashboard</span>
-                </a>
+              <!-- Pool Card 2 -->
+              <div class="card-body-pools">
+                <h4>บ่อกบ</h4>
+                <p class="card-text-description">แอมโมเนีย และแอมโมเนียม</p>
+                <div class="card-body-unit">
+                  <h3>1.9</h3>
+                  <p>mg/L</p>
+                </div>
+                <progress value="78" max="100"></progress>
+                <div class="card-body-footer">
+                  <p style="color: #ef4444">สูง</p>
+                  <p class="footer-unit">Threshold: 2.5 mg/L</p>
+                </div>
+              </div>
 
-                <a href="Ponds.html" class="nav-btn">
-                    <span class="text-th" >บ่อน้ำ</span>
-                    <span class="text-en"> Ponds</span>
-                </a>
-
-                <a href="Pools.html" class="nav-btn">
-                    <span class="text-th" >สระน้ำ</span>
-                    <span class="text-en"> Pools</span>
-                </a>
+              <!-- Pool Card 3 -->
+              <div class="card-body-pools">
+                <h4>สระน้ำ</h4>
+                <p class="card-text-description">ก๊าซไข่เน่า และก๊าซมีเทน</p>
+                <div class="card-body-unit">
+                  <h3>0.12</h3>
+                  <p>mg/L</p>
+                </div>
+                <progress value="55" max="100"></progress>
+                <div class="card-body-footer">
+                  <p style="color: #f59e0b">เฝ้าระวัง</p>
+                  <p class="footer-unit">Threshold: 0.22 mg/L</p>
+                </div>
+              </div>
             </div>
+          </div>
+
+          <!-- Right Section: Notifications -->
+          <div class="card-notification">
+            <div class="content-body-header">
+              <h2>การแจ้งเตือนทั้งหมด</h2>
+            </div>
+
+            <div class="wrap-card-noti">
+              <!-- Notification Item 1 -->
+              <div class="cardnoti-content">
+                <div class="card-noti-content">
+                  <div class="info-left">
+                    <span class="status-dot red"></span>
+                    <div class="text-group">
+                      <h4>CO2</h4>
+                      <p>สระน้ำ - ปลาใหญ่</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="info-right">
+                  <h3>0.05 <span class="unit">mg/L</span></h3>
+                </div>
+              </div>
+
+              <!-- Notification Item 2 -->
+              <div class="cardnoti-content">
+                <div class="card-noti-content">
+                  <div class="info-left">
+                    <span class="status-dot red"></span>
+                    <div class="text-group">
+                      <h4>CO2</h4>
+                      <p>สระน้ำ - ปลาใหญ่</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="info-right">
+                  <h3>0.05 <span class="unit">mg/L</span></h3>
+                </div>
+              </div>
+
+              <!-- Notification Item 3 -->
+              <div class="cardnoti-content">
+                <div class="card-noti-content">
+                  <div class="info-left">
+                    <span class="status-dot red"></span>
+                    <div class="text-group">
+                      <h4>CO2</h4>
+                      <p>สระน้ำ - ปลาใหญ่</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="info-right">
+                  <h3>0.05 <span class="unit">mg/L</span></h3>
+                </div>
+              </div>
+
+              <!-- Notification Item 4 -->
+              <div class="cardnoti-content">
+                <div class="card-noti-content">
+                  <div class="info-left">
+                    <span class="status-dot red"></span>
+                    <div class="text-group">
+                      <h4>CO2</h4>
+                      <p>สระน้ำ - ปลาใหญ่</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="info-right">
+                  <h3>0.05 <span class="unit">mg/L</span></h3>
+                </div>
+              </div>
+
+              <!-- Notification Item 5 -->
+              <div class="cardnoti-content">
+                <div class="card-noti-content">
+                  <div class="info-left">
+                    <span class="status-dot red"></span>
+                    <div class="text-group">
+                      <h4>CO2</h4>
+                      <p>สระน้ำ - ปลาใหญ่</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="info-right">
+                  <h3>0.05 <span class="unit">mg/L</span></h3>
+                </div>
+              </div>
+
+              <!-- Notification Item 6 -->
+              <div class="cardnoti-content">
+                <div class="card-noti-content">
+                  <div class="info-left">
+                    <span class="status-dot red"></span>
+                    <div class="text-group">
+                      <h4>CO2</h4>
+                      <p>สระน้ำ - ปลาใหญ่</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="info-right">
+                  <h3>0.05 <span class="unit">mg/L</span></h3>
+                </div>
+              </div>
+
+            </div> <!-- End wrap-card-noti -->
+          </div> <!-- End card-notification -->
+
+        </div> <!-- End content-text-info -->
+      </div> <!-- End content-body -->
+
+
+
+    <div class="water-pool-card">
+
+      <div class="pool-card-header">
+        <div class="title-and-badges">
+          <h3>บ่อน้ำ</h3>
+        <div class="badge-group">
+          <span class="badge critical-badge">2 วิกฤต</span>
+          <span class="badge warning-badge">4 เฝ้า </span>
+        </div>
+      </div>
+
+        <div class="circular-progress" style="--progress: 56;">
+          <span class="progress-value">56%</span>
+        </div>
 
         </div>
-    </header>
+      
+
+      <div class="pool-metrics-grid">
+
+        <div class="metric-item">
+          <p class="metric-label">pH Level</p>
+          <div class="metric-value">7.2</div>
+        </div>
+
+        <div class="metric-item">
+          <p class="metric-label">Dissolved O<sub>2</sub></p>
+          <div class="metric-value">5.8 <span class="metric-unit">mg/L</span></div>
+        </div>
+
+         <div class="metric-item">
+          <p class="metric-label">Temperature</p>
+          <div class="metric-value">28.4 <span class="metric-unit">°C</span></div>
+        </div>
+
+        <div class="metric-item">
+          <p class="metric-label">Turbidtity</p>
+          <div class="metric-value">18<span class="metric-unit">NTU</span></div>
+        </div>
+      </div>
+
+      <div class="pool-card-footer">
+        <a href="#" class="view-details-link">ดูรายละเอียด</a>
+      </div>
+    </div>
+
+    <div class="water-pool-card">
+
+      <div class="pool-card-header">
+        <div class="title-and-badges">
+          <h3>บ่อน้ำ</h3>
+        <div class="badge-group">
+          <span class="badge critical-badge">2 วิกฤต</span>
+          <span class="badge warning-badge">4 เฝ้า </span>
+        </div>
+      </div>
+
+        <div class="circular-progress" style="--progress: 56;">
+          <span class="progress-value">56%</span>
+        </div>
+
+        </div>
+      
+
+      <div class="pool-metrics-grid">
+
+        <div class="metric-item">
+          <p class="metric-label">pH Level</p>
+          <div class="metric-value">7.2</div>
+        </div>
+
+        <div class="metric-item">
+          <p class="metric-label">Dissolved O<sub>2</sub></p>
+          <div class="metric-value">5.8 <span class="metric-unit">mg/L</span></div>
+        </div>
+
+         <div class="metric-item">
+          <p class="metric-label">Temperature</p>
+          <div class="metric-value">28.4 <span class="metric-unit">°C</span></div>
+        </div>
+
+        <div class="metric-item">
+          <p class="metric-label">Turbidtity</p>
+          <div class="metric-value">18<span class="metric-unit">NTU</span></div>
+        </div>
+      </div>
+
+      <div class="pool-card-footer">
+        <a href="#" class="view-details-link">ดูรายละเอียด</a>
+      </div>
+    </div>
+
+    <div class="water-pool-card">
+
+      <div class="pool-card-header">
+        <div class="title-and-badges">
+          <h3>บ่อน้ำ</h3>
+        <div class="badge-group">
+          <span class="badge critical-badge">2 วิกฤต</span>
+          <span class="badge warning-badge">4 เฝ้า </span>
+        </div>
+      </div>
+
+        <div class="circular-progress" style="--progress: 56;">
+          <span class="progress-value">56%</span>
+        </div>
+
+        </div>
+      
+
+      <div class="pool-metrics-grid">
+
+        <div class="metric-item">
+          <p class="metric-label">pH Level</p>
+          <div class="metric-value">7.2</div>
+        </div>
+
+        <div class="metric-item">
+          <p class="metric-label">Dissolved O<sub>2</sub></p>
+          <div class="metric-value">5.8 <span class="metric-unit">mg/L</span></div>
+        </div>
+
+         <div class="metric-item">
+          <p class="metric-label">Temperature</p>
+          <div class="metric-value">28.4 <span class="metric-unit">°C</span></div>
+        </div>
+
+        <div class="metric-item">
+          <p class="metric-label">Turbidtity</p>
+          <div class="metric-value">18<span class="metric-unit">NTU</span></div>
+        </div>
+      </div>
+
+      <div class="pool-card-footer">
+        <a href="#" class="view-details-link">ดูรายละเอียด</a>
+      </div>
+    </div>
 
 
-</main>
+
+
+    </div> <!-- End main-content -->
+  </main>
 </body>
 </html>
