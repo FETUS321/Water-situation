@@ -65,7 +65,8 @@ body {
 }
 
 /* เวลา hover บน content ที่อยู่ใน navbar */
-.nav-btn:hover, .nav-btn.active {
+.nav-btn:hover,
+.nav-btn.active {
   background-color: #374151;
 }
 
@@ -144,7 +145,6 @@ body {
   justify-content: space-between;
   gap: 24px;
   margin: 0px 0px 24px;
-
 }
 
 /* Custom Page Pools */
@@ -266,6 +266,30 @@ progress::-webkit-progress-value {
   border-radius: 999px;
 }
 
+.progress-watch::-webkit-progress-value {
+  background: #f59e0b;
+}
+
+.progress-watch::-moz-progress-bar {
+  background: #f59e0b;
+}
+
+.progress-High::-webkit-progress-value {
+  background: #ef4444;
+}
+
+.progress-High::-moz-progress-bar {
+  background: #ef4444;
+}
+
+.progress-Normal::-webkit-progress-value {
+  background: #22c55e;
+}
+
+.progress-Normal::-moz-progress-bar {
+  background: #22c55e;
+}
+
 .card-body-footer {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -366,7 +390,6 @@ progress::-webkit-progress-value {
   width: 280px;
   flex-shrink: 0;
   margin-left: auto;
-
 }
 
 .wrap-card-noti {
@@ -402,7 +425,6 @@ progress::-webkit-progress-value {
   margin-bottom: 24px;
   width: 100%;
   box-sizing: border-box;
-
 }
 
 .pool-card-header {
@@ -508,7 +530,6 @@ progress::-webkit-progress-value {
   text-decoration: underline;
 }
 
-
 /* ================= MIDDLE: ALERTS & GRAPH (ส่วนกลาง) ================= */
 .middle-section {
   display: flex;
@@ -591,8 +612,8 @@ progress::-webkit-progress-value {
   transition: background 0.3s;
 }
 
-.action-btn:hover { 
-  background-color: #dc2626; 
+.action-btn:hover {
+  background-color: #dc2626;
 }
 
 /* --- ดีไซน์กล่องกราฟ (ชั่วคราว) --- */
@@ -608,7 +629,6 @@ progress::-webkit-progress-value {
   color: #94a3b8;
   font-size: 14px;
 }
-
 
 /* ================= BOTTOM: DATA TABLE (ตารางข้อมูลด้านล่าง) ================= */
 .bottom-section {
@@ -630,7 +650,8 @@ progress::-webkit-progress-value {
   text-align: left;
 }
 
-.data-table th, .data-table td {
+.data-table th,
+.data-table td {
   padding: 16px;
   border-bottom: 1px solid #f1f5f9;
 }
@@ -664,8 +685,8 @@ progress::-webkit-progress-value {
   font-size: 14px;
 }
 
-.table-link:hover { 
-  text-decoration: underline; 
+.table-link:hover {
+  text-decoration: underline;
 }
 
 /* --- ป้ายสถานะ (Badges) สำหรับใช้ในตาราง --- */
@@ -677,34 +698,32 @@ progress::-webkit-progress-value {
   font-weight: 600;
 }
 
-.critical-badge { 
-  background-color: #fef2f2; 
-  color: #ef4444; 
+.critical-badge {
+  background-color: #fef2f2;
+  color: #ef4444;
 }
 
-.warning-badge  { 
-  background-color: #fffbeb; 
-  color: #f59e0b; 
+.warning-badge {
+  background-color: #fffbeb;
+  color: #f59e0b;
 }
 
-.normal-badge   { 
-  background-color: #ecfdf5; 
-  color: #10b981; 
+.normal-badge {
+  background-color: #ecfdf5;
+  color: #10b981;
 }
-
-
 
 /* Animation*/
 
-@Keyframes fadeInUp {
-  from { 
-    opacity: 0; 
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
     transform: translateY(30px);
   }
-  to { 
-    opacity: 1; 
+  to {
+    opacity: 1;
     transform: translateY(0);
-    }
+  }
 }
 
 .content-grid {
@@ -721,7 +740,8 @@ progress::-webkit-progress-value {
   animation: fadeInUp 0.6s ease-out 0.4s forwards;
 }
 
-.page-header, .header-description {
+.page-header,
+.header-description {
   opacity: 0;
   animation: fadeInUp 0.5s ease-out forwards;
 }

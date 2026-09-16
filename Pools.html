@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Water Situation</title>
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="stylePools.css" />
   </head>
   <body>
     <header class="Nav">
@@ -47,25 +47,36 @@
       <div class="content-grid">
         <div class="card-pools">
           <h4>PH LEVEL</h4>
-          <h3>6.9</h3>
-          <p style="color: #22c55e">↓ LOW 0.2</p>
+          <div class="card-pools-unit">
+            <h3>6.9</h3>
+          </div>
+          <p style="color: #22c55e">↓ 0.2</p>
         </div>
 
         <div class="card-pools">
-          <h4>ข้อมูลสระน้ำ</h4>
-          <h3>6.9</h3>
+          <h4>DISSOVED OXYGEN</h4>
+          <div class="card-pools-unit">
+            <h3>4.2</h3>
+            <p>mg/L</p>
+          </div>
           <p style="color: #22c55e">↓ 1.1 LOW</p>
         </div>
 
         <div class="card-pools">
-          <h4>ข้อมูลสระน้ำ</h4>
-          <h3>6.9</h3>
-          <p style="color: #ef4444">↑ 2.0 HIGH</p>
+          <h4>TEMPERATURE</h4>
+          <div class="card-pools-unit">
+            <h3>30.1</h3>
+            <p>°C</p>
+          </div>
+          <p style="color: #ef4444">↑ 2.0°</p>
         </div>
 
         <div class="card-pools">
-          <h4>ข้อมูลสระน้ำ</h4>
-          <h3>6.9</h3>
+          <h4>TURBIDITY</h4>
+          <div class="card-pools-unit">
+            <h3>34</h3>
+            <p>NTU</p>
+          </div>
           <p style="color: #ef4444">↑ HIGH</p>
         </div>
       </div>
@@ -91,7 +102,12 @@
               <h3>24.6</h3>
               <p>mg/L</p>
             </div>
-            <progress id="file" value="62" max="100"></progress>
+            <progress
+              class="progress-watch"
+              id="file"
+              value="62"
+              max="100"
+            ></progress>
             <div class="card-body-footer">
               <p style="color: #f59e0b">เฝ้าระวัง</p>
               <p class="footer-unit">Threshold: 40 mg/L</p>
@@ -105,7 +121,12 @@
               <h3>1.9</h3>
               <p>mg/L</p>
             </div>
-            <progress id="file" value="78" max="100"></progress>
+            <progress
+              class="progress-High"
+              id="file"
+              value="78"
+              max="100"
+            ></progress>
             <div class="card-body-footer">
               <p style="color: #ef4444">สูง</p>
               <p class="footer-unit">Threshold: 2.5 mg/L</p>
@@ -119,7 +140,12 @@
               <h3>0.12</h3>
               <p>mg/L</p>
             </div>
-            <progress id="file" value="55" max="100"></progress>
+            <progress
+              class="progress-watch"
+              id="file"
+              value="55"
+              max="100"
+            ></progress>
             <div class="card-body-footer">
               <p style="color: #f59e0b">เฝ้าระวัง</p>
               <p class="footer-unit">Threshold: 0.22 mg/L</p>
@@ -133,7 +159,12 @@
               <h3>15.3</h3>
               <p>mg/L</p>
             </div>
-            <progress id="file" value="48" max="100"></progress>
+            <progress
+              class="progress-watch"
+              id="file"
+              value="48"
+              max="100"
+            ></progress>
             <div class="card-body-footer">
               <p style="color: #f59e0b">เฝ้าระวัง</p>
               <p class="footer-unit">Threshold: 32 mg/L</p>
@@ -148,7 +179,7 @@
               <p>mg/L</p>
             </div>
             <progress
-              class="custom-progress"
+              class="progress-High"
               id="file"
               value="70"
               max="100"
@@ -166,7 +197,12 @@
               <h3>5.6</h3>
               <p>mg/L</p>
             </div>
-            <progress id="file" value="40" max="100"></progress>
+            <progress
+              class="progress-Normal"
+              id="file"
+              value="40"
+              max="100"
+            ></progress>
             <div class="card-body-footer">
               <p style="color: #10b981">ปกติ</p>
               <p class="footer-unit">Threshold: 14 mg/L</p>
@@ -175,5 +211,6 @@
         </div>
       </div>
     </div>
+    <script src="progress-animation.js"></script>
   </body>
 </html>
