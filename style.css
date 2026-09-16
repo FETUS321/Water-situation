@@ -18,29 +18,30 @@ body {
 
 /* nav bar*/
 .Nav {
-  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
   position: sticky;
   background-color: #1e293b;
-  border-radius: 40px;
+  border-radius: 999px;
   max-height: max-content;
-  max-width: 1100px;
-  margin: auto;
+  max-width: 1200px;
+  margin: 20px auto;
+  top: 20px;
+  z-index: 100;
 }
 
 /* กลุ่มข้างใน nav bar*/
 .Div-nav {
-  padding-left: 20px;
-  padding-right: 20px;
+  padding: 0 24px;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  height: 50px;
+  height: 60px;
 }
 
 /* โลโก้ซ้ายบน */
 .Name-Logo p {
-  margin: 20px;
-  font-size: 25px;
+  margin: 0px;
+  font-size: 22px;
   color: white;
   font-weight: 600;
 }
@@ -49,8 +50,6 @@ body {
 .Nav-content {
   gap: 18px;
   display: flex;
-  max-width: 1200px;
-  height: 100%;
 }
 
 /* ตัวอักษร content ที่อยู่ใน navbar */
@@ -58,33 +57,28 @@ body {
   display: flex;
   align-items: center;
   text-decoration: none;
-  padding: 4px 12px;
+  padding: 8px 16px;
   color: white;
-  border-radius: 8px;
-  transition: background-color 0.3s;
-  gap: 7px;
+  border-radius: 999px;
+  transition: all 0.3s ease;
+  gap: 8px;
 }
 
 /* เวลา hover บน content ที่อยู่ใน navbar */
-.nav-btn:hover {
+.nav-btn:hover, .nav-btn.active {
   background-color: #374151;
-  border-radius: 200px;
-  height: 20px;
-  width: max-content;
-  margin: auto;
 }
 
 /* ตัวอักษรภาษาไทยของ content ที่อยู่ใน navbar */
 .nav-btn .text-th {
   color: #ffffff;
-  font-weight: 400;
+  font-weight: 500;
   font-family: "Prompt", sans-serif;
 }
 
 /* ตัวอักษรภาษาอังกฤษของ content ที่อยู่ใน navbar */
 .nav-btn .text-en {
-  color: #9ca3af;
-  font-weight: 0.85em;
+  color: #94a3b8;
   font-size: 0.85em;
   font-family: "Prompt", sans-serif;
 }
@@ -149,6 +143,7 @@ body {
   grid-template-columns: repeat(4, 1fr);
   justify-content: space-between;
   gap: 24px;
+  margin: 0px 0px 24px;
 
 }
 
@@ -514,9 +509,224 @@ progress::-webkit-progress-value {
 }
 
 
+/* ================= MIDDLE: ALERTS & GRAPH (ส่วนกลาง) ================= */
+.middle-section {
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  gap: 24px;
+  width: 100%;
+  max-width: 1280px;
+  margin: 0 auto 24px;
+  box-sizing: border-box;
+}
+
+.alerts-box,
+.graph-box {
+  flex: 1 1 0;
+  min-width: 0;
+  max-width: 50%;
+  width: 100%;
+  min-height: 260px;
+  box-sizing: border-box;
+}
+
+.alerts-box {
+  display: flex;
+  flex-direction: column;
+}
+
+.alert-list {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 12px;
+}
+
+/* --- ดีไซน์กล่องแจ้งเตือนด่วน --- */
+.alert-list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.alert-item {
+  display: flex;
+  align-items: center;
+  padding: 16px;
+  background-color: #fef2f2; /* พื้นหลังสีแดงอ่อนให้ดูเป็นเรื่องด่วน */
+  border: 1px solid #fecaca;
+  border-radius: 12px;
+  gap: 16px;
+}
+
+.alert-info {
+  flex: 1;
+}
+
+.alert-info h4 {
+  margin: 0 0 4px 0;
+  color: #991b1b;
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.alert-info p {
+  margin: 0;
+  color: #ef4444;
+  font-size: 13px;
+}
+
+.action-btn {
+  background-color: #ef4444;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 8px;
+  font-family: "Prompt", sans-serif;
+  font-size: 13px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.action-btn:hover { 
+  background-color: #dc2626; 
+}
+
+/* --- ดีไซน์กล่องกราฟ (ชั่วคราว) --- */
+.graph-placeholder {
+  width: 100%;
+  height: 180px;
+  background-color: #f8fafc;
+  border: 2px dashed #cbd5e1;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #94a3b8;
+  font-size: 14px;
+}
+
+
+/* ================= BOTTOM: DATA TABLE (ตารางข้อมูลด้านล่าง) ================= */
+.bottom-section {
+  width: 100%;
+  max-width: 1280px;
+  margin: 0 auto 60px;
+  box-sizing: border-box;
+}
+
+.table-wrapper {
+  width: 100%;
+  overflow-x: auto;
+}
+
+.data-table {
+  width: 100%;
+  min-width: 900px;
+  border-collapse: collapse;
+  text-align: left;
+}
+
+.data-table th, .data-table td {
+  padding: 16px;
+  border-bottom: 1px solid #f1f5f9;
+}
+
+.data-table th {
+  background-color: #f8fafc;
+  color: #64748b;
+  font-weight: 500;
+  font-size: 14px;
+}
+
+.data-table td {
+  font-size: 15px;
+  color: #334155;
+  vertical-align: middle;
+}
+
+.data-table tbody tr:hover {
+  background-color: #f8fafc; /* ไฮไลท์พื้นหลังเวลาเอาเมาส์ชี้แถวนั้นๆ */
+}
+
+.pool-name {
+  font-weight: 500;
+  color: #0f172a;
+}
+
+.table-link {
+  color: #3b82f6;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 14px;
+}
+
+.table-link:hover { 
+  text-decoration: underline; 
+}
+
+/* --- ป้ายสถานะ (Badges) สำหรับใช้ในตาราง --- */
+.badge {
+  display: inline-block;
+  padding: 4px 12px;
+  border-radius: 999px;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.critical-badge { 
+  background-color: #fef2f2; 
+  color: #ef4444; 
+}
+
+.warning-badge  { 
+  background-color: #fffbeb; 
+  color: #f59e0b; 
+}
+
+.normal-badge   { 
+  background-color: #ecfdf5; 
+  color: #10b981; 
+}
 
 
 
+/* Animation*/
 
+@Keyframes fadeInUp {
+  from { 
+    opacity: 0; 
+    transform: translateY(30px);
+  }
+  to { 
+    opacity: 1; 
+    transform: translateY(0);
+    }
+}
 
+.content-grid {
+  animation: fadeInUp 0.6s ease-out forwards;
+}
 
+.middle-section {
+  opacity: 0;
+  animation: fadeInUp 0.6s ease-out 0.2s forwards;
+}
+
+.bottom-section {
+  opacity: 0;
+  animation: fadeInUp 0.6s ease-out 0.4s forwards;
+}
+
+.page-header, .header-description {
+  opacity: 0;
+  animation: fadeInUp 0.5s ease-out forwards;
+}
+
+.content-body {
+  opacity: 0;
+  animation: fadeInUp 0.5s ease-out 0.1s forwards;
+}
