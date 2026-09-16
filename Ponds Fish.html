@@ -1,0 +1,166 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Water Situation</title>
+    <link rel="icon" type="image/x-icon" href="https://media.tenor.com/ApKG4pa06cQAAAAM/red-hearing-peak.gif">
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header class="Nav">
+      <div class="Div-nav">
+        <div class="Name-Logo">
+          <p>Water Situation</p>
+        </div>
+
+        <div class="Nav-content">
+          <a href="index.html" class="nav-btn">
+            <span class="text-th">ภาพรวม</span>
+            <span class="text-en"> Dashboard</span>
+          </a>
+
+          <a href="Ponds.html" class="nav-btn">
+            <span class="text-th">บ่อน้ำ</span>
+            <span class="text-en"> Ponds</span>
+          </a>
+
+          <a href="Pools.html" class="nav-btn">
+            <span class="text-th">สระน้ำ</span>
+            <span class="text-en"> Pools</span>
+          </a>
+        </div>
+      </div>
+    </header>
+
+    <div class="main-content">
+      <div class="page-header">
+        <h1>บ่อน้ำ - Ponds</h1>
+      </div>
+
+      <div class="header-description">
+        <p>
+          ข้อมูลของเสียของสัตว์น้ำ Aquatic Waste Product Analysis
+        </p>
+      </div>
+
+      <div class="content-grid">
+        <div class="card-pools">
+          <h4>PH LEVEL</h4>
+          <h3>7.2</h3>
+          <p style="color: #0d2aca">± STABLE</p>
+        </div>
+
+        <div class="card-pools">
+          <h4>DISSOLVED</h4>
+          <h3>5.8</h3>
+          <p style="color: #22c55e">↓ 0.3 LOW</p>
+        </div>
+
+        <div class="card-pools">
+          <h4>TEMPERATURE</h4>
+          <h3>28.4 °C</h3>
+          <p style="color: #ef4444">↑ 1.2 °C</p>
+        </div>
+
+        <div class="card-pools">
+          <h4>TURBIDITY</h4>
+          <h3>18 NTU</h3>
+          <p style="color: #0d2aca">± NORMAI</p>
+        </div>
+      </div>
+
+      <div class="content-body">
+        <div class="content-body-header">
+          <h2>ปลา - Fish</h2>
+        </div>
+
+        <div class="content-body-description">
+          <p>
+            ข้อมูลของเสียจากการขับถ่ายและอาหารในการเลี้ยงน้ำ Waste release from fish in ponds
+          </p>
+        </div>
+
+        <div class="content-grid-pools">
+          <div class="card-body-pools">
+            <h4>Leftover Feed</h4>
+            <p class="card-text-description">เศษอาหารที่เหลือ</p>
+
+            <div class="card-body-unit">
+              <h3>12.9</h3>
+              <p>g/L</p>
+            </div>
+            <progress id="file" value="62" max="100"></progress>
+            <div class="card-body-footer">
+              <p style="color: #f59e0b">เฝ้าระวัง</p>
+              <p class="footer-unit">Threshold: 30 g/L</p>
+            </div>
+          </div>
+
+          <div class="card-body-pools">
+            <h4>Fish Feces</h4>
+            <p class="card-text-description">มูลปลา</p>
+            <div class="card-body-unit">
+              <h3>8.1</h3>
+              <p>mg/L</p>
+            </div>
+           <progress id="file" value="40" max="100"></progress>
+            <div class="card-body-footer">
+              <p style="color: #10b981">ปกติ</p>
+              <p class="footer-unit">Threshold: 25 mg/L</p>
+            </div>
+          </div>
+
+          <div class="card-body-pools">
+            <h4>CO₂</h4>
+            <p class="card-text-description">ก๊าซคาร์บอนไดออกไซด์</p>
+            <div class="card-body-unit">
+              <h3>28.3</h3>
+              <p>mg/L</p>
+            </div>
+            <progress id="file" value="35" max="100"></progress>
+            <div class="card-body-footer">
+              <p style="color: #f59e0b">เฝ้าระวัง</p>
+              <p class="footer-unit">Threshold: 50 mg/L</p>
+            </div>
+          </div>
+
+          <div class="card-body-pools">
+            <h4>Ammonia / Ammonium</h4>
+            <p class="card-text-description">แอมโมเนีย และแอมโมเนียม</p>
+            <div class="card-body-unit">
+              <h3>0.8</h3>
+              <p>mg/L</p>
+            </div>
+            <progress id="file" value="80" max="100"></progress>
+            <div class="card-body-footer">
+              <p style="color: #ef4444">สูง</p>
+              <p class="footer-unit">Threshold: 1.2 mg/L</p>
+            </div>
+          </div>
+
+          <div class="card-body-pools">
+            <h4> Nitrite / Nitrate</h4>
+            <p class="card-text-description">ไนไตรต์ และไนเตรต</p>
+            <div class="card-body-unit">
+              <h3>3.2</h3>
+              <p>mg/L</p>
+            </div>
+            <progress
+              class="custom-progress"
+              id="file"
+              value="40"
+              max="100"
+            ></progress>
+            <div class="card-body-footer">
+              <p style="color: #10b981">ปกติ</p>
+              <p class="footer-unit">Threshold: 12 g/L</p>
+            </div>
+          </div>
+
+          
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
